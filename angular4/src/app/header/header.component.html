@@ -1,0 +1,15 @@
+<ul>
+  <li><a routerLink=''>Home</a></li>
+  <ng-template [ngIf]="auth">
+  <li><a routerLink='image'>Image</a></li>
+  <li><a routerLink='user'>User</a></li>
+  <li><button (click)="logout()">lOGOUT</button></li>
+  </ng-template>
+  <ng-template [ngIf]="!auth">
+  <li><a routerLink='login'>Login</a></li>
+  <li><a routerLink='registrer'>Registration</a></li>
+  </ng-template>
+</ul>
+<div>
+  <router-outlet></router-outlet>
+</div>
